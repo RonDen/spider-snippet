@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<TITLE>唐诗三百首、宋词精选|诗词诗歌名句大全|诗词常识|诗词下载_天天诗词网</TITLE>
+<meta name="description" content="天天诗词网传承国学经典为您奉献唐诗三百首全集、诗经、诗歌、诗歌大全、唐诗、宋词、宋词精选、诗经名句、诗词名句、诗歌、对联、名人名言名句、散文、周公解梦、诗词常识、诗词下载等内容。天天诗词网旨在古诗词的文化传承，让更多的国人爱上国学经典，熟读诗词名句。" />
+<meta name="keywords" content="诗歌,唐诗三百首,名人名言名句,诗歌大全,宋词精选,诗经,诗词名句,对联大全,国学经典,散文,诗词常识,诗词下载,周公解梦" />
+<link rel="stylesheet" type="text/css" href="/skin/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/css1.css" />
+<link rel="stylesheet" type="text/css" href="/css/index.css" />
+</head>
+<body>
+<script src="/images/js/j.js"></script>
+<script>
+	/*	var dqurl = document.URL;
+		dqurl2 = dqurl.replace(/http:\/\/(.*?)\//, "http://m.xinniao.org/")
+        if (navigator.userAgent.match(/Android/i)) {
+            window.location.href = dqurl2;
+        }
+        else if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)) {
+        window.location.href = dqurl2;
+        }*/
+</script>
+<div class="topbd">
+<div class="header">
+<div class="top">
+<h1><a href="http://www.ningyangtv.cn" title="天天诗词网"></a></h1>
+<ul class="nav">
+<li id="i"><a href="http://www.ningyangtv.cn">首页</a></li>
+<li id="li1"><a href="/gushi/">古诗</a></li>
+<li id="li2"><a href="/mingju/">名句</a></li>
+<li id="li3"><a href="/shiren/">诗人</a></li>
+<li id="li4"><a href="/book/">古籍</a></li>
+<li id="li5"><a href="/shicilishi/">历史</a></li>
+<li id="li6"><a href="/shicizhishi/">知识</a></li>
+<li id="li7"><a href="/chengyu/">成语</a></li>
+<li id="m"><a href="http://so.ningyangtv.cn/">查询</a></li>
+</ul>
+<div class="search">
+<div class="lable">
+<select  class="select">
+<option value="all">综合</option>
+<option value="gushi">诗词</option>
+<option value="author">作者</option>
+<option value="mingju">诗句</option>
+<option value="book">典籍</option>
+<option value="chengyu">成语</option>
+<option value="star">句首</option>
+<option value="end">句尾</option>
+</select>
+</div>
+<div style="float:left;">
+<input type="text" name="ekey" placeholder="多个关键字用空格隔开,最多两个空格" class="search-text" id="word" autocomplete="off" x-webkit-speech="" speech="">
+</div>
+<div style="float:left;"><input type="submit" value=" " class="search-btn" id="search_btn"></div>
+
+<div style="margin-left:0px; display:none" id="box"></div>
+</div>
+</div>
+
+</div>
+</div>
+<script>
+$('#search_btn').click(function(e) {
+    var kwd = $('#word').val()
+	if(kwd =='' || kwd =='多个关键字用空格隔开,最多两个空格'){
+		alert('请输入关键字')
+		return false;	
+	}else{
+		if (/^[\u4e00-\u9fa5\s]+$/.test(kwd)) {
+			var strs= new Array(); //定义一数组 
+			strs=kwd.split(/\s+/); //字符分割 
+			if(strs.length > 3){
+				alert("只能有两个空格")
+				return false;	
+			}
+			var type = $(".select").val();
+			kwd = encodeURI(kwd)
+			window.open("http://so.ningyangtv.cn/chaxun/"+type+"/"+kwd+"/",'_blank');
+		} else {
+			alert("关键字只能为中文，多个用空格隔开");
+		}
+	}
+});
+$(document).keydown(function(event){ 
+if(event.keyCode==13){ 
+$("#search_btn").click(); 
+} 
+});  
+</script>
+<script>
+$('#word').bind('focus',function(){
+	setInterval('showbox()',1000);
+})
+$('#word').blur(function(e) {
+    $('#word').unbind("focus");
+});
+//显示搜索选项
+function showbox(){
+	var kwd = $('#word').val();
+	var len = kwd.length;
+	if(len > 0){
+		$.post("/ajax.php",{kwd:kwd},function(rs){
+			if(rs !=''){
+				$('#box').html(rs);
+				$('#box').show();
+				$('#word').unbind("focus");
+			}else{
+				$('#word').unbind("focus");	
+			}
+		});		
+	}else{
+		$('#box').hide();
+		$('#word').unbind("focus");	
+	}	
+}
+function onAdiv(div) {
+    document.getElementById(div).style.backgroundColor = '#EBEAD9';
+}
+function outAdiv(div) {
+    document.getElementById(div).style.backgroundColor = '#FBFAF6';
+}
+</script>
+<!--更换首页开始-->
+
+<div class="kuang m_auto mt_20">
+<div class="kuang_all">
+<div class="kuang_top"></div>
+<div class="kuang_middle p_20">
+<h2 class="f_26 clr_3 f_norm al_ct bar_h2">精选题材</h2>
+<ul class="zm1 column4 f_16 ticai line_4 mt_20">
+<li>「<a href="/gushi/0/0/0/3/0/0/" target="_blank">春天</a>」</li>
+<li>「<a href="/gushi/0/0/0/4/0/0/" target="_blank">夏天</a>」</li>
+<li>「<a href="/gushi/0/0/0/5/0/0/" target="_blank">秋天</a>」</li>
+<li>「<a href="/gushi/0/0/0/6/0/0/" target="_blank">冬天</a>」</li>
+<li>「<a href="/gushi/0/0/0/9/0/0/" target="_blank">写风</a>」</li>
+<li>「<a href="/gushi/0/0/0/10/0/0/" target="_blank">写花</a>」</li>
+<li>「<a href="/gushi/0/0/0/8/0/0/" target="_blank">写雪</a>」</li>
+<li>「<a href="/gushi/0/0/0/7/0/0/" target="_blank">写雨</a>」</li>
+<li>「<a href="/gushi/0/0/0/15/0/0/" target="_blank">月亮</a>」</li>
+<li>「<a href="/gushi/0/0/0/11/0/0/" target="_blank">梅花</a>」</li>
+<li>「<a href="/gushi/0/0/0/12/0/0/" target="_blank">荷花</a>」</li>
+<li>「<a href="/gushi/0/0/0/13/0/0/" target="_blank">菊花</a>」</li>
+<li>「<a href="/gushi/0/0/0/14/0/0/" target="_blank">柳树</a>」</li>
+<li>「<a href="/gushi/0/0/0/28/0/0/" target="_blank">爱国</a>」</li>
+<li>「<a href="/gushi/0/0/0/31/0/0/" target="_blank">思乡</a>」</li>
+<li>「<a href="/gushi/0/0/0/33/0/0/" target="_blank">爱情</a>」</li>
+<li>「<a href="/gushi/0/0/0/34/0/0/" target="_blank">励志</a>」</li>
+<li>「<a href="/gushi/0/0/0/35/0/0/" target="_blank">哲理</a>」</li>
+<li>「<a href="/gushi/0/0/0/37/0/0/" target="_blank">悼亡</a>」</li>
+<li>「<a href="/gushi/0/0/0/39/0/0/" target="_blank">老师</a>」</li>
+<li>「<a href="/gushi/0/0/0/41/0/0/" target="_blank">友情</a>」</li>
+<li>「<a href="/gushi/0/0/0/76/0/0/" target="_blank">饮酒</a>」</li>
+<li>「<a href="/gushi/0/0/0/309/0/0/" target="_blank">西湖</a>」</li>
+<li>「<a href="/gushi/0/0/0/50/0/0/" target="_blank">春节</a>」</li>
+<li>「<a href="/gushi/0/0/0/51/0/0/" target="_blank">元宵节</a>」</li>
+<li>「<a href="/gushi/0/0/0/53/0/0/" target="_blank">清明节</a>」</li>
+<li>「<a href="/gushi/0/0/0/54/0/0/" target="_blank">端午节</a>」</li>
+<li>「<a href="/gushi/0/0/0/55/0/0/" target="_blank">七夕节</a>」</li>
+<li>「<a href="/gushi/0/0/0/56/0/0/" target="_blank">中秋节</a>」</li>
+<li>「<a href="/gushi/0/0/0/57/0/0/" target="_blank">重阳节</a>」</li>
+<li>「<a href="/gushi/0/0/0/146/0/0/" target="_blank">赞美诗</a>」</li>
+<li>「<a href="/gushi/0/0/0/109/0/0/" target="_blank">伤怀诗</a>」</li>
+<li>「<a href="/gushi/0/0/0/16/0/0/" target="_blank">山水诗</a>」</li>
+<li>「<a href="/gushi/0/0/0/24/0/0/" target="_blank">田园诗</a>」</li>
+<li>「<a href="/gushi/0/0/0/30/0/0/" target="_blank">送别诗</a>」</li>
+<li>「<a href="/gushi/0/0/0/29/0/0/" target="_blank">离别诗</a>」</li>
+<div class="cls"></div>
+</ul>
+</div>
+<div class="kuang_bottom"></div>
+</div>
+</div>
+
+
+
+
+<div class="zhuanj m_auto">
+<h2 class="f_26 clr_3 f_norm al_ct bar_h2 mt_40">精选诗集</h2>
+<ul class="zhuanj_ul zm1 mt_10">
+<li><div class="mask"><p class="f_12 clr_f">《唐诗三百首》作为中小学生接触中国古代诗歌最好的入门书籍,只要熟读唐诗三百首,不会作诗也会吟。《唐诗三百首》共收录了77家诗...</p><div class="al_ct"><a href="/gushi/0/0/0/68/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/tangshisanbaishou.gif" class="dis_b" alt="唐诗三百首"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/68/0/0/" class=" fl"  target="_blank">唐诗三百首</a><span class="f_12 ver_mid clr_qianh fr">265首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">宋词是宋代最有特色的文学样式,《宋词三百首》为词学大师朱孝臧（又号彊村）选编，是流传最广的、影响最大的宋词选本。初版于民国甲子...</p><div class="al_ct"><a href="/gushi/0/0/0/70/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/songcisanbaishou.gif" class="dis_b" alt="宋词三百首"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/70/0/0/" class=" fl"  target="_blank">宋词三百首</a><span class="f_12 ver_mid clr_qianh fr">201首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">古诗三百首提供古诗词三百首全集,《古诗三百首》选编了从上古到晚清共两千多年近两百位诗人约三百首诗歌作品，其中既包括先秦两汉...</p><div class="al_ct"><a href="/gushi/0/0/0/69/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/gushisanbaishou.gif" class="dis_b" alt="古诗三百首"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/69/0/0/" class=" fl"  target="_blank">古诗三百首</a><span class="f_12 ver_mid clr_qianh fr">168首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">《古诗十九首》是乐府古诗文人化的显著标志。收录了包括《行行重行行》、《青青河畔草》、《青青陵上柏》、《今日良宴会》、《西...</p><div class="al_ct"><a href="/gushi/0/0/0/67/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/gushishijiushou.gif" class="dis_b" alt="古诗十九首"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/67/0/0/" class=" fl"  target="_blank">古诗十九首</a><span class="f_12 ver_mid clr_qianh fr">18首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">宋词是中国古代文学的一块芬芳绚丽的园圃。宋词收录了包括满江红、水调歌头、浣溪沙、梦玉人引、汉宫春、菩萨蛮、念奴娇、水龙吟...</p><div class="al_ct"><a href="/gushi/0/0/0/60/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/songcijingxuan.gif" class="dis_b" alt="宋词精选"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/60/0/0/" class=" fl"  target="_blank">宋词精选</a><span class="f_12 ver_mid clr_qianh fr">173首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">根据最新教育部语文新大纲要求，选编古代汉乐府诗、北朝民歌和唐、宋、明、清等各个朝代著名诗人留下的80首经典诗歌，大多数是人们能...</p><div class="al_ct"><a href="/gushi/0/0/0/61/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/xiaoxuegushi.gif" class="dis_b" alt="小学古诗"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/61/0/0/" class=" fl"  target="_blank">小学古诗</a><span class="f_12 ver_mid clr_qianh fr">41首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">初中古诗词大全整理了初中生必备的一些古诗词大全，包括关雎、蒹葭、君子于役、陌上桑、龟虽寿、观沧海、次北固山下、黄鹤楼、望岳...</p><div class="al_ct"><a href="/gushi/0/0/0/62/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/chuzhonggushi.gif" class="dis_b" alt="初中古诗"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/62/0/0/" class=" fl"  target="_blank">初中古诗</a><span class="f_12 ver_mid clr_qianh fr">62首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">高中古诗词大全整理了高中生必备的一些古诗词大全，包括静女、无衣、氓、湘夫人、.离骚、长歌行、孔雀东南飞、迢迢牵牛星、短歌行...</p><div class="al_ct"><a href="/gushi/0/0/0/63/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/gaozhonggushi.gif" class="dis_b" alt="高中古诗"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/63/0/0/" class=" fl"  target="_blank">高中古诗</a><span class="f_12 ver_mid clr_qianh fr">13首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">文言文是以古代汉语为基础经过加工的书面语。主要结构有判断句、被动句、倒装句、省略句和固定结构组合而成，文言的特点，是相对白话...</p><div class="al_ct"><a href="/gushi/0/0/0/64/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/xiaoxuewenyanwen.gif" class="dis_b" alt="小学文言文"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/64/0/0/" class=" fl"  target="_blank">小学文言文</a><span class="f_12 ver_mid clr_qianh fr">4首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">《初中文言文阅读训练》按材料分为四篇：（一）人物篇，（二）动物篇，（三）事理篇，（四）志怪篇，意在增加阅读兴趣。按学习方法...</p><div class="al_ct"><a href="/gushi/0/0/0/65/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/chuzhongwenyanwen.gif" class="dis_b" alt="初中文言文"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/65/0/0/" class=" fl"  target="_blank">初中文言文</a><span class="f_12 ver_mid clr_qianh fr">2首</span><div class="cls"></div></div></li>
+<li><div class="mask"><p class="f_12 clr_f">高中文言文主要整理了包括过秦论、兰亭集序、归去来兮辞、劝学 《荀子》、邹忌讽齐王纳谏 《战国策》、师说 韩愈、阿房宫赋等古...</p><div class="al_ct"><a href="/gushi/0/0/0/66/0/0/" class="f_12" target="_blank" rel="nofollow">点击阅读</a></div></div><p><img src="/css/gaozhongwenyanwen.gif" class="dis_b" alt="高中文言文"/></p><div class="zhuanj_text f_16"><a href="/gushi/0/0/0/66/0/0/" class=" fl"  target="_blank">高中文言文</a><span class="f_12 ver_mid clr_qianh fr">1首</span><div class="cls"></div></div></li>  
+</ul>
+</div>
+
+<div class="famous bg_gray  mt_20">
+<h2 class="f_26 clr_3 f_norm al_ct bar_h2">著名诗人</h2>
+<div class="m_auto w_hidden">
+<ul class="famous_ul zm1 al_ct mt_30 f_14">
+<li><a href="/shiren/242.html" target="_blank"><img src="/uploadsabcd/userup/libai.jpg" alt="李白"/><p>李白</p><span class="f_12 clr_qianh">唐代  诗仙</span></a></li>
+<li><a href="/shiren/99.html" target="_blank"><img src="/uploadsabcd/userup/dufu.jpg" alt="杜甫"/><p>杜甫</p><span class="f_12 clr_qianh">唐代  诗圣</span></a></li>
+<li><a href="/shiren/4.html" target="_blank"><img src="/uploadsabcd/userup/baijuyi.jpg" alt="白居易"/><p>白居易</p><span class="f_12 clr_qianh">唐代  诗王</span></a></li>
+<li><a href="/shiren/469.html" target="_blank"><img src="/uploadsabcd/userup/wangchangling.jpg" alt="王昌龄"/><p>王昌龄</p><span class="f_12 clr_qianh">唐代  诗家天子</span></a></li>
+<li><a href="/shiren/326.html" target="_blank"><img src="/uploadsabcd/userup/liuyuxi.jpg" alt="刘禹锡"/><p>刘禹锡</p><span class="f_12 clr_qianh">唐代  诗豪</span></a></li>
+<li><a href="/shiren/254.html" target="_blank"><img src="/uploadsabcd/userup/lihe.jpg" alt="李贺"/><p>李贺</p><span class="f_12 clr_qianh">唐代  诗鬼</span></a></li>
+<li><a href="/shiren/490.html" target="_blank"><img src="/uploadsabcd/userup/wangwei.jpg" alt="王维"/><p>王维</p><span class="f_12 clr_qianh">唐代  诗佛</span></a></li>
+<li><a href="/shiren/202.html" target="_blank"><img src="/uploadsabcd/userup/jiadao.jpg" alt="贾岛"/><p>贾岛</p><span class="f_12 clr_qianh">唐代  诗奴</span></a></li>
+<li><a href="/shiren/366.html" target="_blank"><img src="/uploadsabcd/userup/mengjiao.jpg" alt="孟郊"/><p>孟郊</p><span class="f_12 clr_qianh">唐代  诗囚</span></a></li>
+<li><a href="/shiren/65.html" target="_blank"><img src="/uploadsabcd/userup/chenziang.jpg" alt="陈子昂"/><p>陈子昂</p><span class="f_12 clr_qianh">唐代  诗骨</span></a></li>
+<li><a href="/shiren/467.html" target="_blank"><img src="/uploadsabcd/userup/wangbo.jpg" alt="王勃"/><p>王勃</p><span class="f_12 clr_qianh">唐代  诗杰</span></a></li>
+<li><a href="/shiren/168.html" target="_blank"><img src="/uploadsabcd/userup/hezhizhang.jpg" alt="贺知章"/><p>贺知章</p><span class="f_12 clr_qianh">唐代  诗狂</span></a></li>
+
+
+
+
+
+</ul>
+</div>
+</div>
+
+
+
+<div class="kuang m_auto  mt_40">
+<div class="kuang_all">
+<div class="kuang_top"></div>
+<div class="kuang_middle pt_20 pb_20">
+<h2 class="f_26 clr_3 f_norm al_ct bar_h2">最新收录</h2>
+<ul class="zm1 jingx_ul f_14">
+<li><a href="/shi/62476.html" target=_blank>乡愁</A> <span class="f_12"><A href="/shiren/578.html" target=_blank>余光中</A></span></li>
+<li><a href="/shi/62477.html" target=_blank>面朝大海,春暖花开</A> <span class="f_12"><A href="/shiren/151.html" target=_blank>海子</A></span></li>
+<li><a href="/shi/62478.html" target=_blank>偶然</A> <span class="f_12"><A href="/shiren/552.html" target=_blank>徐志摩</A></span></li>
+<li><a href="/shi/62479.html" target=_blank>清明</A> <span class="f_12"><A href="/shiren/630.html" target=_blank>郑愁予</A></span></li>
+<li><a href="/shi/62475.html" target=_blank>桃花源记</A> <span class="f_12"><A href="/shiren/458.html" target=_blank>陶渊明</A></span></li>
+<li><a href="/shi/62474.html" target=_blank>望岳三首</A> <span class="f_12"><A href="/shiren/99.html" target=_blank>杜甫</A></span></li>
+<li><a href="/shi/62470.html" target=_blank>82属狗一生有几次婚姻，佩戴貔貅可以使家庭幸福美满！</A> <span class="f_12">貔貅网</span></li>
+<li><a href="/shi/62471.html" target=_blank>属狗的狮子座男生人缘不好，貔貅可以让你拥有高情商！</A> <span class="f_12">貔貅</span></li>
+<li><a href="/shi/62472.html" target=_blank>属猪年龄对照表，原来属猪戴貔貅能改变懒惰的毛病！</A> <span class="f_12"><A href="/shiren/1.html" target=_blank></A></span></li>
+<li><a href="/shi/62473.html" target=_blank>83年蛇灾是怎么回事，全靠貔貅才能否极泰来！</A> <span class="f_12">貔貅</span></li>
+<li><a href="/shi/12232.html" target=_blank>登幽州台歌</A> <span class="f_12"><A href="/shiren/65.html" target=_blank>陈子昂</A></span></li>
+<li><a href="/shi/5864.html" target=_blank>喜春来·泰定三年丙寅岁除夜玉山舟中赋</A> <span class="f_12"><A href="/shiren/807.html" target=_blank>张雨</A></span></li>
+<li><a href="/shi/5866.html" target=_blank>浣溪沙·庚申除夜</A> <span class="f_12"><A href="/shiren/375.html" target=_blank>纳兰性德</A></span></li>
+<li><a href="/shi/5867.html" target=_blank>高阳台·除夜</A> <span class="f_12"><A href="/shiren/156.html" target=_blank>韩疁</A></span></li>
+<li><a href="/shi/5868.html" target=_blank>古蟾宫·元宵</A> <span class="f_12"><A href="/shiren/478.html" target=_blank>王磐</A></span></li>
+<li><a href="/shi/5869.html" target=_blank>鹧鸪天·元宵后独酌</A> <span class="f_12"><A href="/shiren/567.html" target=_blank>杨慎</A></span></li>
+<li><a href="/shi/5870.html" target=_blank>喜迁莺·清明节</A> <span class="f_12"><A href="/shiren/559.html" target=_blank>薛昭蕴</A></span></li>
+<li><a href="/shi/5871.html" target=_blank>清明日对酒</A> <span class="f_12"><A href="/shiren/741.html" target=_blank>高翥</A></span></li>
+<li><a href="/shi/5872.html" target=_blank>寒食诗</A> <span class="f_12">云表</span></li>
+<li><a href="/shi/5875.html" target=_blank>小重山·端午</A> <span class="f_12"><A href="/shiren/1074.html" target=_blank>舒頔</A></span></li>
+<li><a href="/shi/5876.html" target=_blank>怅诗</A> <span class="f_12"><A href="/shiren/100.html" target=_blank>杜牧</A></span></li>
+<div class="cls"></div>
+</ul>
+</div>
+<div class="kuang_bottom"></div>
+</div>
+</div>
+
+
+
+<div class="kuang m_auto  mt_40">
+<div class="kuang_all">
+<div class="kuang_top"></div>
+<div class="kuang_middle   pt_20 pb_20">
+<h2 class="f_26 clr_3 f_norm al_ct bar_h2">精选诗句</h2>
+<ul class="zm1 f_14 jingx_ul shiju line_4 mt_20">
+<li><a href="/juzi/5671.html" target=_blank>秀色掩今古，荷花羞玉颜</A> <span class="f_12"><A href="/shiren/242.html" target=_blank>李白</A></span></li>
+<li><a href="/juzi/5683.html" target=_blank>壮志饥餐胡虏肉，笑谈渴饮匈奴血</A> <span class="f_12"><A href="/shiren/588.html" target=_blank>岳飞</A></span></li>
+<li><a href="/juzi/5677.html" target=_blank>马毛缩如蝟，角弓不可张</A> <span class="f_12"><A href="/shiren/9.html" target=_blank>鲍照</A></span></li>
+<li><a href="/juzi/5672.html" target=_blank>日夕凉风至，闻蝉但益悲</A> <span class="f_12"><A href="/shiren/365.html" target=_blank>孟浩然</A></span></li>
+<li><a href="/juzi/5673.html" target=_blank>黄金燃桂尽，壮志逐年衰</A> <span class="f_12"><A href="/shiren/365.html" target=_blank>孟浩然</A></span></li>
+<li><a href="/juzi/5675.html" target=_blank>芭蕉不展丁香结， 同向春风各自愁</A> <span class="f_12"><A href="/shiren/266.html" target=_blank>李商隐</A></span></li>
+<li><a href="/juzi/5856.html" target=_blank>长江悲已滞，万里念将归。</A> <span class="f_12"><A href="/shiren/467.html" target=_blank>王勃</A></span></li>
+<li><a href="/juzi/5670.html" target=_blank>西施越溪女，出自苎萝山</A> <span class="f_12"><A href="/shiren/242.html" target=_blank>李白</A></span></li>
+<li><a href="/juzi/5669.html" target=_blank>猿啼客散暮江头，人自伤心水自流</A> <span class="f_12"><A href="/shiren/306.html" target=_blank>刘长卿</A></span></li>
+<li><a href="/juzi/5682.html" target=_blank>雁声吹过黄昏雨篱边月圆萋紧</A> <span class="f_12"><A href="/shiren/105.html" target=_blank>端木国瑚</A></span></li>
+<li><a href="/juzi/5676.html" target=_blank>无言暗将红泪弹阑珊，香销轻梦还</A> <span class="f_12"><A href="/shiren/375.html" target=_blank>纳兰性德</A></span></li>
+<li><a href="/juzi/5689.html" target=_blank>粉身碎骨浑不怕， 要留清白在人间</A> <span class="f_12"><A href="/shiren/575.html" target=_blank>于谦</A></span></li>
+<li><a href="/juzi/5678.html" target=_blank>投躯报明主，身死为国殇</A> <span class="f_12"><A href="/shiren/9.html" target=_blank>鲍照</A></span></li>
+<li><a href="/juzi/5674.html" target=_blank>清水出芙蓉，天然去雕饰</A> <span class="f_12"><A href="/shiren/242.html" target=_blank>李白</A></span></li>
+<li><a href="/juzi/5688.html" target=_blank>天街小雨润如酥，草色遥看近却无</A> <span class="f_12"><A href="/shiren/160.html" target=_blank>韩愈</A></span></li>
+<li><a href="/juzi/5681.html" target=_blank>莺花昨梦总飘零，一笏姜山似旧青</A> <span class="f_12"><A href="/shiren/105.html" target=_blank>端木国瑚</A></span></li>
+<li><a href="/juzi/5679.html" target=_blank>时危见臣节，世乱识忠良</A> <span class="f_12"><A href="/shiren/9.html" target=_blank>鲍照</A></span></li>
+<li><a href="/juzi/5685.html" target=_blank>一山飞峙大江边， 跃上葱茏四百旋</A> <span class="f_12"><A href="/shiren/362.html" target=_blank>毛泽东</A></span></li>
+<li><a href="/juzi/5686.html" target=_blank>陶令不知何处去， 桃花源里可耕田</A> <span class="f_12"><A href="/shiren/362.html" target=_blank>毛泽东</A></span></li>
+<li><a href="/juzi/5687.html" target=_blank>最是一年春好处，绝胜烟柳满皇都</A> <span class="f_12"><A href="/shiren/160.html" target=_blank>韩愈</A></span></li>
+<div class="cls"></div>
+</ul>
+</div>
+<div class="kuang_bottom"></div>
+</div>
+</div>
+<style>
+.chengyu li{ display:inline-block}
+</style>
+<!--成语开始-->
+<div class="kuang m_auto mt_20">
+<div class="kuang_all">
+<div class="kuang_top"></div>
+<div class="kuang_middle p_20">
+<h2 class="f_26 clr_3 f_norm al_ct bar_h2"><a href="/chengyu/">最新成语</a></h2>
+<ul class="zm1 column4 f_16 chengyu line_4 mt_20">
+<li>「<a href="/chengyu/113.html" target=_blank>安枕而卧</A>」</li>
+<li>「<a href="/chengyu/112.html" target=_blank>安宅正路</A>」</li>
+<li>「<a href="/chengyu/111.html" target=_blank>安于一隅</A>」</li>
+<li>「<a href="/chengyu/110.html" target=_blank>安于现状</A>」</li>
+<li>「<a href="/chengyu/109.html" target=_blank>安于故俗，溺于旧闻</A>」</li>
+<li>「<a href="/chengyu/108.html" target=_blank>安营扎寨</A>」</li>
+<li>「<a href="/chengyu/107.html" target=_blank>安心定志</A>」</li>
+<li>「<a href="/chengyu/106.html" target=_blank>安闲自在</A>」</li>
+<li>「<a href="/chengyu/105.html" target=_blank>安闲自得</A>」</li>
+<li>「<a href="/chengyu/104.html" target=_blank>安危与共</A>」</li>
+<li>「<a href="/chengyu/103.html" target=_blank>安危相易</A>」</li>
+<li>「<a href="/chengyu/102.html" target=_blank>安土重迁</A>」</li>
+<li>「<a href="/chengyu/101.html" target=_blank>安适如常</A>」</li>
+<li>「<a href="/chengyu/100.html" target=_blank>安室利处</A>」</li>
+<li>「<a href="/chengyu/99.html" target=_blank>安时处顺</A>」</li>
+<li>「<a href="/chengyu/98.html" target=_blank>安身之地</A>」</li>
+<li>「<a href="/chengyu/97.html" target=_blank>安身之处</A>」</li>
+<li>「<a href="/chengyu/96.html" target=_blank>安身为乐</A>」</li>
+<div class="cls"></div>
+</ul>
+</div>
+<div class="kuang_bottom"></div>
+</div>
+</div>
+<!--成语结束-->
+<div class="kuang m_auto  mt_40">
+<div class="kuang_all">
+<div class="kuang_top"></div>
+<div class="kuang_middle   pt_20 pb_20">
+<h2 class="f_26 clr_3 f_norm al_ct bar_h2">精选知识</h2>
+<ul class="zm1 f_14 jingx_ul shiju line_4 mt_20">
+<li><a href="/zhishi/570.html" target=_blank>生肖狗是哪一年出生的？为何只要是生意人都喜欢戴貔貅！</A> <span class="f_12">2021-03-03</span></li>
+<li><a href="/zhishi/569.html" target=_blank>14岁是0几年，这个属相戴貔貅真的能学业有成？</A> <span class="f_12">2021-03-03</span></li>
+<li><a href="/zhishi/568.html" target=_blank>鸡年是哪年，为什么必须得戴一个如意貔貅？</A> <span class="f_12">2021-03-03</span></li>
+<li><a href="/zhishi/567.html" target=_blank>小儿垂钓赞美白衣天使</A> <span class="f_12">2021-03-01</span></li>
+<li><a href="/zhishi/566.html" target=_blank>泊船瓜洲我学会了什么</A> <span class="f_12">2021-03-01</span></li>
+<li><a href="/zhishi/565.html" target=_blank>《公交车让座》看图写话二年级</A> <span class="f_12">2021-02-27</span></li>
+<li><a href="/zhishi/564.html" target=_blank>鱼我所欲也</A> <span class="f_12">2021-02-27</span></li>
+<li><a href="/zhishi/563.html" target=_blank>黛眉山诗词集</A> <span class="f_12">2021-02-26</span></li>
+<li><a href="/zhishi/562.html" target=_blank>鼎湖山 诗词 鼎湖山自然保护区</A> <span class="f_12">2021-02-26</span></li>
+<li><a href="/zhishi/561.html" target=_blank>鼎盛时期的诗词 鼎盛时期的意思</A> <span class="f_12">2021-02-25</span></li>
+<li><a href="/zhishi/362.html" target=_blank>《在狱咏蝉》骆宾王唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/359.html" target=_blank>《城中蛾眉女》寒山唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/378.html" target=_blank>《滕王阁》王勃唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/364.html" target=_blank>《夕次蒲类津》骆宾王唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/380.html" target=_blank>《别薛华》王勃唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/363.html" target=_blank>《送郑少府入辽共赋侠客远从戎》骆宾王唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/358.html" target=_blank>《诗二首》王梵志唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/377.html" target=_blank>《上元夜》崔液唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/361.html" target=_blank>《黄瓜台辞》李贤唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<li><a href="/zhishi/360.html" target=_blank>《入朝洛堤步月》上官仪唐诗鉴赏</A> <span class="f_12">2018-02-27</span></li>
+<div class="cls"></div>
+</ul>
+</div>
+<div class="kuang_bottom"></div>
+</div>
+</div>
+
+<div class="cls"></div>
+<div class="links m_auto">
+<h2 class="links_h2 f_norm mt_30 f_16 f_norm"><span>友情连接</span></h2>
+<ul class="links_ul zm1 mt_20">
+<li><a target="_blank" href="https://ads.google.cn/home/contact-us/">开拓海外市场</a></li>
+<li><a target="_blank" href="http://www.renxiangongshe.com">合击</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">望庐山瀑布</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">游园不值</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">木兰辞</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">池上</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">将进酒</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">江上渔者</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">长歌行</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">泊船瓜洲</a></li>
+<li><a target="_blank" href="http://www.noobmb.com/">N厂</a></li>
+<li><a target="_blank" href="http://www.vs-china.com/">VS厂</a></li>
+<li><a target="_blank" href="http://www.vs-china.com/">VS厂</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">元日</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">从军行</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">小池</a></li>
+<li><a target="_blank" href="http://www.hzsky.com">福海阁小说网</a></li>
+<li><a target="_blank" href="http://www.renxiangongshe.com">传奇合击</a></li>
+<li><a target="_blank" href="http://www.imxcam.com/product/list-95-cn.html">RV1109</a></li>
+<li><a target="_blank" href="https://ads.google.cn/home/contact-us/">开拓海外市场</a></li>
+<li><a target="_blank" href="http://www.zhangpengyun.com">了凡四训</a></li>
+<li><a target="_blank" href="https://www.ccccm.cn">godaddy备案域名</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">端午诗句</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">将进酒</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">咏鹅</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">石灰吟</a></li>
+<li><a target="_blank" href="http://www.ningyangtv.cn">十五夜望月</a></li>
+<li><a target="_blank" href="http://www.96zz.com">诗词</a></li>
+</ul>
+</div>
+<div class="cls mt_20"></div>
+<!--更换首页结束-->
+
+<div style="background:#725B47">
+<div class="footer">
+<p>Copyright &copy; 2015 - 2018 www.ningyangtv.cn, All Rights Reserved.<a href="http://www.ningyangtv.cn">诗词网</a> <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?93cfca73c54406835cfe8f8932280843";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_4037007'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/stat.php%3Fid%3D4037007%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+
+</div>
+</div><script>
+  $('.zhuanj_ul li').hover(function(){
+            $(this).find('.mask').show();
+	},function(){
+		$(this).find('.mask').hide();
+	});
+</script>
+</body>
+</html>

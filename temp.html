@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>朱景玄,简介和他的诗词作品大全_天天诗词网</title>
+<meta name="KeyWords" content="朱景玄,朱景玄简介,朱景玄作品," />
+<meta name="description" content="朱景玄,朱景玄简介,朱景玄诗词作品,朱景玄，唐朝武宗会昌(841-846)时人，吴郡（今江苏苏州）人，元和初应进士举，" />
+<link rel="stylesheet" type="text/css" href="/skin/style.css" />
+<!--[if IE]><script src="/js/html5.js"></script><![endif]-->
+</head>
+
+<body>
+﻿<script src="/images/js/j.js"></script>
+<script>
+	/*	var dqurl = document.URL;
+		dqurl2 = dqurl.replace(/http:\/\/(.*?)\//, "http://m.xinniao.org/")
+        if (navigator.userAgent.match(/Android/i)) {
+            window.location.href = dqurl2;
+        }
+        else if ((navigator.userAgent.indexOf('iPhone') != -1) || (navigator.userAgent.indexOf('iPod') != -1)) {
+        window.location.href = dqurl2;
+        }*/
+</script>
+<div class="topbd">
+<div class="header">
+<div class="top">
+<h1><a href="http://www.ningyangtv.cn" title="天天诗词网"></a></h1>
+<ul class="nav">
+<li id="i"><a href="http://www.ningyangtv.cn">首页</a></li>
+<li id="li1"><a href="/gushi/">古诗</a></li>
+<li id="li2"><a href="/mingju/">名句</a></li>
+<li id="li3"><a href="/shiren/">诗人</a></li>
+<li id="li4"><a href="/book/">古籍</a></li>
+<li id="li5"><a href="/shicilishi/">历史</a></li>
+<li id="li6"><a href="/shicizhishi/">知识</a></li>
+<li id="li7"><a href="/chengyu/">成语</a></li>
+<li id="m"><a href="http://so.ningyangtv.cn/">查询</a></li>
+</ul>
+<div class="search">
+<div class="lable">
+<select  class="select">
+<option value="all">综合</option>
+<option value="gushi">诗词</option>
+<option value="author">作者</option>
+<option value="mingju">诗句</option>
+<option value="book">典籍</option>
+<option value="chengyu">成语</option>
+<option value="star">句首</option>
+<option value="end">句尾</option>
+</select>
+</div>
+<div style="float:left;">
+<input type="text" name="ekey" placeholder="多个关键字用空格隔开,最多两个空格" class="search-text" id="word" autocomplete="off" x-webkit-speech="" speech="">
+</div>
+<div style="float:left;"><input type="submit" value=" " class="search-btn" id="search_btn"></div>
+
+<div style="margin-left:0px; display:none" id="box"></div>
+</div>
+</div>
+
+</div>
+</div>
+<script>
+$('#search_btn').click(function(e) {
+    var kwd = $('#word').val()
+	if(kwd =='' || kwd =='多个关键字用空格隔开,最多两个空格'){
+		alert('请输入关键字')
+		return false;	
+	}else{
+		if (/^[\u4e00-\u9fa5\s]+$/.test(kwd)) {
+			var strs= new Array(); //定义一数组 
+			strs=kwd.split(/\s+/); //字符分割 
+			if(strs.length > 3){
+				alert("只能有两个空格")
+				return false;	
+			}
+			var type = $(".select").val();
+			kwd = encodeURI(kwd)
+			window.open("http://so.ningyangtv.cn/chaxun/"+type+"/"+kwd+"/",'_blank');
+		} else {
+			alert("关键字只能为中文，多个用空格隔开");
+		}
+	}
+});
+$(document).keydown(function(event){ 
+if(event.keyCode==13){ 
+$("#search_btn").click(); 
+} 
+});  
+</script>
+<script>
+$('#word').bind('focus',function(){
+	setInterval('showbox()',1000);
+})
+$('#word').blur(function(e) {
+    $('#word').unbind("focus");
+});
+//显示搜索选项
+function showbox(){
+	var kwd = $('#word').val();
+	var len = kwd.length;
+	if(len > 0){
+		$.post("/ajax.php",{kwd:kwd},function(rs){
+			if(rs !=''){
+				$('#box').html(rs);
+				$('#box').show();
+				$('#word').unbind("focus");
+			}else{
+				$('#word').unbind("focus");	
+			}
+		});		
+	}else{
+		$('#box').hide();
+		$('#word').unbind("focus");	
+	}	
+}
+function onAdiv(div) {
+    document.getElementById(div).style.backgroundColor = '#EBEAD9';
+}
+function outAdiv(div) {
+    document.getElementById(div).style.backgroundColor = '#FBFAF6';
+}
+</script><div class="main">
+<div class="left">
+<!--四块开始-->
+<div class="kk k1"></div>
+<div class="kk k2"></div>
+<div class="kk k3"></div>
+<div class="kk k4"></div>
+<!--四块结束-->
+<div class="article">
+<h2>朱景玄 简介</h2>
+<em>「<a href="/gushi/9/0/0/0/0/0/" target="_blank">唐朝</a>」</em>
+<dl class="content">
+<dd id="cc">
+<img style="float:left;padding-right:10px;" alt="朱景玄" src="/uploadsabcd/150215/1-150215122U3429.jpg" width="105" height="150">朱景玄，唐朝武宗会昌(841-846)时人，吴郡（今江苏苏州）人，元和初应进士举，曾任咨议，历翰林学士，官至太子谕德。诗一卷，今存十五首。编撰有〈唐朝名画录〉。| 〈唐朝名画录〉是一部以分品列传体编写的断代画史，开创历代画史编写的先河，对后代产生了深远影响。编者以“神、妙、能、逸”四品品评诸家，其中“神、妙、能”又分上、中、下三等。“画格不拘常法”的画家则入逸品。其本文则各为略叙事实，据其所亲见立论，神品诸人较详，妙品诸人次之，能品诸人更略，逸品三人又较详。|
+</dd>
+<h3>朱景玄相关资料</h3>
+<dd>
+</dd>
+</dl>
+
+<div class="bq">
+<p>版权声明：本文内容由网友上传(或整理自网络)，原作者已无法考证，版权归原作者所有。诗词吧免费发布仅供学习参考，其观点不代表本站立场。</p>
+<p>转载请注明：原文链接 | <a href="http://www.ningyangtv.cn/shiren/1297.html" rel="bookmark" title="朱景玄 简介">http://www.ningyangtv.cn/shiren/1297.html</a></p>
+</div>
+
+<div class="pl">
+<!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+
+<!-- UY END -->
+</div>
+
+</div>
+
+
+</div>
+
+<div class="right">
+<div class="title"><h2>朱景玄的诗词</h2></div>
+<ul class="boli">
+<li><a href="/shi/46046.html" target="_blank">《溪东岑望天都山》</a></li>
+<li class="m"><a href="/gushi/0/1297/0/0/0/0/">更多朱景玄的诗词</a>>>></li>
+</ul>
+<div class="title"><h2>热门名句</h2></div>
+<ul class="boli">
+<!--  --><li><a href="/juzi/23.html" target="_blank">春蚕到死丝方尽，蜡炬成灰泪始干</a></li><!--  --><li><a href="/juzi/3805.html" target="_blank">禁里疏钟官舍晚，省中啼鸟吏人稀</a></li><!--  --><li><a href="/juzi/2177.html" target="_blank">君家何处住，妾住在横塘</a></li><!--  --><li><a href="/juzi/1388.html" target="_blank">向浅洲远渚，亭亭清绝</a></li><!--  --><li><a href="/juzi/2170.html" target="_blank">二月江南花满枝，他乡寒食远堪悲</a></li><!--  --><li><a href="/juzi/911.html" target="_blank">千里万里，二月三月，行色苦愁人</a></li><!--  --><li><a href="/juzi/3010.html" target="_blank">工欲善其事，必先利其器</a></li><!--  --><li><a href="/juzi/1645.html" target="_blank">尽道隋亡为此河，至今千里赖通波</a></li><!--  --><li><a href="/juzi/3920.html" target="_blank">相逢处，自有暗尘随马</a></li><!--  --><li><a href="/juzi/497.html" target="_blank">伤心莫语，记那日旗亭，水嬉散尽，中酒阻风去</a></li><!--  -->
+</ul>
+<div class="title"><h2>热门成语</h2></div>
+<ul class="boli">
+        <!--  -->		
+        <li><a title="闲邪存诚" href="/chengyu/10437.html" target="_blank" style="display: inline-block;">闲邪存诚 [xián  xié  cún  chéng]</a></li><!--  -->		
+        <li><a title="不主故常" href="/chengyu/1121.html" target="_blank" style="display: inline-block;">不主故常 [bù  zhǔ  gù  cháng]</a></li><!--  -->		
+        <li><a title="扭转乾坤" href="/chengyu/7176.html" target="_blank" style="display: inline-block;">扭转乾坤 [niǔ zhuǎn qián kūn]</a></li><!--  -->		
+        <li><a title="鼠目寸光" href="/chengyu/9054.html" target="_blank" style="display: inline-block;">鼠目寸光 [shǔ  mù  cùn  guāng]</a></li><!--  -->		
+        <li><a title="悠悠荡荡" href="/chengyu/11909.html" target="_blank" style="display: inline-block;">悠悠荡荡 [yōu  yōu  dàng  dàng]</a></li><!--  -->		
+        <li><a title="同病相怜" href="/chengyu/9589.html" target="_blank" style="display: inline-block;">同病相怜 [tóng  bìng  xiāng  lián]</a></li><!--  -->		
+        <li><a title="沙里淘金" href="/chengyu/8452.html" target="_blank" style="display: inline-block;">沙里淘金 [shā  lǐ  táo  jīn]</a></li><!--  -->		
+        <li><a title="东西南北" href="/chengyu/2524.html" target="_blank" style="display: inline-block;">东西南北 [dōng  xī  nán  běi]</a></li><!--  -->		
+        <li><a title="仪态万方" href="/chengyu/11556.html" target="_blank" style="display: inline-block;">仪态万方 [yí  tài  wàn  fāng]</a></li><!--  -->		
+        <li><a title="百身何赎" href="/chengyu/331.html" target="_blank" style="display: inline-block;">百身何赎 [bǎi  shēn  hé  shú]</a></li><!--  -->
+        </ul>
+</div>
+</div>
+
+<div style="background:#725B47">
+<div class="footer">
+<p>Copyright &copy; 2015 - 2018 www.ningyangtv.cn, All Rights Reserved.<a href="http://www.ningyangtv.cn">诗词网</a> <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?93cfca73c54406835cfe8f8932280843";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">document.write(unescape("%3Cspan id='cnzz_stat_icon_4037007'%3E%3C/span%3E%3Cscript src='https://s4.cnzz.com/stat.php%3Fid%3D4037007%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></p>
+
+</div>
+</div><script>
+$('ul.nav li#li3 a').addClass('cur')
+</script>
+</body>
+</html>
